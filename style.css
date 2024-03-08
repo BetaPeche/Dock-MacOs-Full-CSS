@@ -28,7 +28,7 @@ body {
 .card {
   height: 50px;
   width: 50px;
-  transition: 300ms 50ms;
+  transition: 400ms 50ms;
 }
 
 .card img{
