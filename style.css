@@ -52,6 +52,7 @@ body {
 	margin-left: 22px;
 	margin-right: 22px;
 	transition: 200ms;
+	cursor: pointer;
 }
 
 .card:has(+ .card + .card:hover),
