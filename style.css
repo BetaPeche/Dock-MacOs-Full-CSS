@@ -1,54 +1,64 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-image: url("img/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-image: url("img/wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 3px;
-  padding: 3px 3px 7px 3px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  border: solid 1px rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: 8px;
+	padding: 3px 3px 7px 3px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	border: solid 1px rgba(255, 255, 255, 0.3);
 }
 
 .card {
-  height: 50px;
-  width: 50px;
-  transition: 400ms 50ms;
+	height: 50px;
+	width: 50px;
+	transition: 200ms;
 }
 
-.card img{
-  width: 100%;
-  height: 100%;
+.card img {
+	width: 100%;
+	height: 100%;
 }
 
 .card:hover {
-  transform-origin: 50% bottom;
-  transform: scale(1.8);
-  margin-left: 15px;
-  margin-right: 15px;
-  transition: 300ms;
-  cursor: pointer;
+	transform-origin: bottom;
+	transform: scale(2.1);
+	margin-left: 25px;
+	margin-right: 25px;
+	transition: 200ms;
+	cursor: pointer;
 }
 
-.card:has(+ .card:hover), .card:hover + .card {
-  transform-origin: 50% bottom;
-  transform: scale(1.5);
-  margin-left: 10px;
-  margin-right: 10px;
-  transition: 300ms;
+.card:has(+ .card:hover),
+.card:hover+.card {
+	transform-origin: bottom;
+	transform: scale(1.8);
+	margin-left: 25px;
+	margin-right: 25px;
+	transition: 200ms;
+}
+
+.card:has(+ .card + .card:hover),
+.card:hover+.card+.card {
+	transform-origin: bottom;
+	transform: scale(1.4);
+	margin-left: 5px;
+	margin-right: 5px;
+	transition: 200ms;
 }
